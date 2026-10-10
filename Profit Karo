@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LootDeals - Best Online Offers & Discounts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">🔥 LootDeals</h1>
+      <span class="text-xs sm:text-sm bg-indigo-700 px-3 py-1 rounded-full">Today's Top Deals</span>
+    </div>
+  </header>
+
+  <!-- Product Grid -->
+  <main class="max-w-5xl mx-auto p-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Sample Deal Card -->
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col justify-between hover:shadow-lg transition">
+        <div>
+          <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Amazon</span>
+          <img src="https://via.placeholder.com/200" alt="Product" class="w-full h-44 object-contain my-3">
+          <h2 class="text-base font-semibold text-gray-800">Wireless Bluetooth Earbuds (40H Playtime)</h2>
+          <div class="mt-2 flex items-baseline gap-2">
+            <span class="text-xl font-bold text-gray-900">₹999</span>
+            <span class="text-sm text-gray-400 line-through">₹2,999</span>
+            <span class="text-sm font-bold text-green-600">66% OFF</span>
+          </div>
+        </div>
+        
+        <div class="mt-4 pt-3 border-t flex flex-col gap-2">
+          <!-- Apna Affiliate Link yahan dalein -->
+          <a href="YOUR_AFFILIATE_LINK" target="_blank" class="w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 rounded-lg">
+            Buy on Amazon
+          </a>
+          <button onclick="shareDeal('Wireless Earbuds just for ₹999!', 'YOUR_AFFILIATE_LINK')" class="w-full text-center bg-green-500 hover:bg-green-600 text-white text-sm py-1.5 rounded-lg">
+            Share on WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function shareDeal(title, link) {
+      const text = encodeURIComponent(`${title}\nCheck this deal here: ${link}`);
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    }
+  </script>
+</body>
+</html>
